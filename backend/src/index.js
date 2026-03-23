@@ -20,12 +20,10 @@ const __dirname = path.dirname(__filename);
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: ["http://localhost:5173"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: "https://your-vercel-app.vercel.app",
+  credentials: true
+}));
 
 
 // Routes
